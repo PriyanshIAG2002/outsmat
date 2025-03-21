@@ -1,0 +1,171 @@
+.ourservice{
+    width: 100%;
+    height: 100vh;
+    background-color: #88B7BD;
+    overflow: hidden;
+}
+
+.ourVisionBox{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+.ourVisionHead{
+    line-height: 1em;
+    color: #FFF4B8;
+    font-size: 5vw;
+    font-weight: 600;
+    font-family: "poppins", serif;
+    text-align:left;
+}
+
+.ourVisionSubhead{
+    color: #FFF4B8;
+    font-size:2rem;
+    line-height: 1.4em;
+    font-weight:400;
+    font-family: "Poppins", serif;
+    margin-top: 1.2rem;
+    padding-right: 1rem;
+    text-align:left;
+    max-width: 95%;
+}
+
+.navButtons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 999999999;
+}
+
+.leftNavButton {
+    position: absolute;
+    left: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    width: 50px;
+    height: 100%;
+    /* border-radius: 50%; */
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease-in-out;
+    border-right: 2px solidrgba(255, 244, 184, 0);
+    color: #FFF4B8;
+    pointer-events: auto;
+    background-color: #88B7BD;
+}
+
+.rightNavButton {
+  background-color: #88B7BD;
+    position: absolute;
+    right: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    width: 50px;
+    height: 100%;
+    /* border-radius: 50%; */
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease-in-out;
+    border-left: 2px solidrgba(255, 244, 184, 0);
+    color: #FFF4B8;
+    pointer-events: auto;
+}
+
+.leftNavButton:hover,
+.rightNavButton:hover {
+    background-color:rgba(136, 183, 189, 0.19);
+    color: #FFF4B8;
+}
+
+.ourServiceRow{
+    /* border-left: 1px solid #FFF4B8; */
+    border: none;
+}
+
+.lootieStyle{
+    width: 500px;
+}
+
+@media (max-width: 767px) {
+  .ourservice{
+    position: relative;
+  }
+    .lootieStyle{
+        width: 250px;
+      }
+      .ourServiceRow{
+        height: auto;
+        flex-direction: column-reverse;
+      }
+
+      .ourVisionBox{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 5rem;
+      }
+
+      .ourVisionHead{
+        font-size: 2.2rem;
+    }
+    .ourServiceRow{
+        border: none;
+    }
+    .ourVisionSubhead{
+        color: #FFF4B8;
+        font-size:1.2rem;
+        line-height: 1.2em;
+        font-weight:500;
+        font-family: "Poppins", serif;
+        margin-top: 1.2rem;
+    }
+
+    .ourLootieBox{
+        margin-top: 2rem;
+    }
+    
+    .leftNavButton,
+    .rightNavButton {
+        position: static;
+        transform: none;
+    }
+
+    .navButtons {
+        bottom: 20px;
+        top: auto;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

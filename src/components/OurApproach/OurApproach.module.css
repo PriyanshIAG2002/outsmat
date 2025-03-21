@@ -1,0 +1,202 @@
+.scrollSectionOuter {
+    overflow: hidden;
+    background-color: #F76A1E;
+}
+
+.scrollContainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.scrollSectionInner {
+    height: 100vh;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    transform-origin: left center;
+    will-change: transform;
+}
+
+.scrollSection {
+    height: 100vh;
+    width: 150vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.scrollSectionIntro {
+    width: 200vw;
+}
+
+.rippleMain{
+    margin-left: 10rem;
+}
+
+.lottieRipple{
+    width: 300px;
+    margin-right: 3rem
+}
+
+.rippleMainTitle{
+    line-height: 1em;
+    color: #FFF4B8;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: 'poppins', Times, serif;
+}
+
+.rippleMainSubtitle{
+    line-height: 1em;
+    color: #FFF4B8;
+    font-size: 9rem;
+    font-weight: 600;
+    font-family: 'poppins', Times, serif;
+    padding-top: 1rem;
+}
+
+/* White Rectangle Box */
+.imageWrapper {
+    width: 400px;
+    height: 600px;
+    background: white;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.textWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 48px;
+    right: 2rem;
+}
+
+.itemNumber{
+    font-size:6rem;
+    color: #2E2111;
+    font-weight:500;
+    font-family: "Caveat", serif;
+    padding-left: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.lottieAnimation {
+    width: 80%;
+    height: 80%;
+}
+
+.contentBox{
+    display:flex;
+}
+
+/* Title & Description */
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+.wrapperTitle {
+    line-height: 1em;
+    color: #FFF4B8;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', Times, serif;
+    padding: 0.8rem 0.5rem;
+    
+    /* Floating shadow effect */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.subTitle {
+    line-height: 1em;
+    color: #FFF4B8;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', Times, serif;
+    letter-spacing: 0.01em;
+    max-width: 500px;
+    margin-top: 1.5rem;
+    padding: 0.8rem 0.5rem;
+    
+    /* Floating shadow effect */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Add floating effect on hover */
+.wrapperTitle:hover, .subTitle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 767px) {
+    .scrollSection {
+        width: 200vw;
+        padding: 0 2rem;
+    }
+
+    .scrollSectionIntro {
+        width: 250vw;
+    }
+
+    .rippleMainTitle{
+        line-height: 1em;
+        color: #FFF4B8;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .rippleMainSubtitle{
+        line-height: 1em;
+        color: #FFF4B8;
+        font-size: 4rem;
+        font-weight: 600;
+        padding-top: 0.5rem;
+    }
+
+    .wrapperTitle {
+        font-size: 1.5rem;
+        padding: 0.8rem 0.5rem;
+    }
+    
+    .subTitle {
+        line-height: 1.2em;
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: 'Poppins', Times, serif;
+        letter-spacing: 0.01em;
+        max-width: 300px;
+        margin-top: 1rem;
+    }
+
+    .textWrapper{
+        position: relative;
+        bottom: 48px;
+        right: 4rem;
+    }
+
+    .contentBox {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .imageWrapper {
+        width: 300px;
+        height: 450px;
+    }
+}

@@ -1,0 +1,234 @@
+.testimonial {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+  position: relative;
+  min-height: 100vh;
+}
+
+.whattheysay {
+  color: hsla(0, 0.00%, 7.10%, 0.54);
+  font-size: 1rem;
+  font-weight: 500;
+  background: hsla(0, 0.00%, 7.10%, 0.18);
+  padding: 0.5rem 0.8rem;
+  border-radius: 1rem;
+  font-family: 'poppins', Times, serif;
+  margin-top: 1rem;
+}
+
+.testheading {
+  line-height: 0.8em;
+  word-spacing: 0.2em;
+  text-align: center;
+  color: #2E2111;
+  font-size: 3vw;
+  font-weight: 600;
+  font-family: "Montserrat", serif;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.testimonialWrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  height: 504px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: white;
+  margin-bottom: 1.5rem;
+}
+
+.testimonialRow {
+  padding: 1rem;
+  background: white;
+  border-radius: 20px;
+  height: 450px;
+}
+
+.testimonialContent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.testimonialText {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #2E2111;
+  margin-bottom: 2rem;
+  max-height: 250px;
+  font-family: "Poppins", serif;
+  padding: 0 1rem;
+  position: relative;
+  text-align: left;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+  padding: 0 1rem;
+}
+
+.userAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(128, 128, 128, 0.151);
+}
+
+.userAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.userName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2E2111;
+  margin: 0;
+  font-family: "Montserrat", serif;
+}
+
+.userRole {
+  font-size: 0.9rem;
+  color: #636e72;
+  margin: 0;
+}
+
+.testimonialImage {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.navButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0rem;
+  position: relative;
+  z-index: 10;
+}
+
+.navButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0000005b;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.navButton:hover {
+  background: #0000005b;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 767px) {
+  .testimonial {
+    padding: 2rem 1rem;
+  }
+
+  .whattheysay {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .testheading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.2em;
+  }
+
+  .testimonialWrapper {
+    padding: 1rem;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .testimonialRow {
+    padding: 0.5rem;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .imageCol {
+    order: -1;
+  }
+
+  .contentCol {
+    margin-top: 1rem;
+  }
+
+  .testimonialContent {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .testimonialText {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    max-height: none;
+  }
+
+  .testimonialImage {
+    padding: 0;
+    height: auto;
+  }
+
+  .image {
+    height: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .userInfo {
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .userAvatar {
+    width: 45px;
+    height: 45px;
+  }
+
+  .userName {
+    font-size: 0.9rem;
+  }
+
+  .navButtons {
+    margin-top: 1rem;
+  }
+
+  .navButton {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}

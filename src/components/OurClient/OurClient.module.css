@@ -1,0 +1,70 @@
+.ourClient {
+    background-color: #FBF4D7;
+    overflow: hidden; /* Prevent horizontal scrolling */
+    max-width: 100vw;
+    min-height: 100vh; /* Ensures it covers the full viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2rem;
+    margin-top: 1.2rem;
+}
+
+.ourClientTitle{
+    color: #2E2111;
+    font-size: 5rem;
+    font-weight: 800;
+    font-family: "Montserrat", serif;
+    line-height: 1em;
+    white-space: nowrap;
+}
+
+.clientNames {
+    color: #2E2111;
+    font-size: 1.5rem;
+    font-family: "Montserrat", serif;
+    line-height: 1.5;
+    padding-top: 0.5rem;
+    max-width: 40%;
+    font-weight: 600;
+}
+
+.ourClientWall{
+    overflow: hidden;
+    width: 100vw;
+    margin-bottom: 2rem;
+}
+
+
+@media (max-width: 767px) {
+    .ourClient{
+        position: static !important;
+      }
+    .titleContainer {
+        flex-direction: column;
+        padding: 1rem;
+        align-items: flex-start;
+    }
+    .ourClientTitle{
+        font-size:3rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .clientNames {
+        font-size: 1rem;
+        max-width: 100%;
+        padding-left: 0.2rem;
+    }
+
+    .ourClientTitle div{
+        display: inline;
+    }
+}

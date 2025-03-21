@@ -1,0 +1,26 @@
+.preloaderIntroduction {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 9999999;
+  background-color: #88B7BD;
+}
+
+.preloaderImg{
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .preloaderImg {
+    width: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .preloaderImg {
+    margin-top: 0.2rem;
+  }
+}

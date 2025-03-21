@@ -1,0 +1,236 @@
+.heroBanner {
+    width: 100%;
+    height: 100vh;
+    background-color: #F76A1E;
+    overflow: hidden;
+  }
+  
+  .grainOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/noise.jpg");
+    background-size: cover;
+    opacity: 0.2; /* Adjust opacity for visibility */
+    pointer-events: none;
+  }
+  
+
+  .heroRipple{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .heroHead{
+    line-height: 0.8em;
+    font-family: 'poppins', Times, serif;
+    word-spacing: 0.2em;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #FFF4B8;
+    font-size: 16vw;
+    font-weight: 600;
+    font-family: "Montserrat", serif;
+  }
+
+  .heroBottomSections{
+    width:100%;
+    position:absolute;
+    bottom:3rem;
+    display : flex;
+    justify-content : space-between;   
+    align-items:center;
+    padding:0px 3rem; 
+  }
+
+  .heroSubhead{
+    color: #FFF4B8;
+    font-size:3rem;
+    line-height: 1.2em;
+    max-width : 50%;
+    font-weight:400;
+    font-family: "Poppins", serif;
+    position: relative;
+    bottom: 2rem;
+  }
+
+  .heroJoinUs{
+    border:2px solid #FFF4B8;
+    border-radius: 21px;
+    padding:1rem 6rem;
+    color: #FFF4B8;
+    font-size : 1rem;
+    font-weight : 700;
+    transition: all 0.2s linear;
+    font-family: "Montserrat", serif;
+  }
+
+  .heroJoinUs:hover{
+    background: #FFF4B8;
+    color: #F76A1E;
+  }
+
+  .heroSubhead {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  
+  .word {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+
+  .lottieMain{
+    opacity: 0.5;
+  }
+
+.heroTopSection {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.mainHeading {
+  color: #FFF4B8;
+  font-size: 6vw;  /* responsive font size */
+  line-height: 1.1;
+  font-weight: 700;  /* made it bolder */
+  font-family: "Montserrat", serif;
+  white-space: nowrap;  /* keeps text in one line */
+  width: 100%;
+  text-align: center;
+
+}
+
+.mobileHeading{
+  display: none;
+}
+
+.lineWrapper {
+  overflow: hidden;
+  margin-bottom: 0.2em;
+}
+
+.heroSubhead {
+  color: #FFF4B8;
+  font-size: 2.5rem;  /* made it bigger */
+  line-height: 1.2;
+  max-width: 50%;
+  font-weight: 400;
+  font-family: "Poppins", serif;
+  text-align: left;
+  position: relative;
+  top: 0.2rem;
+}
+
+@media (max-width: 767px) {
+  .heroBanner{
+    position: static !important;
+  }
+  .heroHead{
+    margin-top:1rem;
+  }
+
+  .lottieMain{
+    width: 300px;
+    opacity: 0.8;
+    position: relative;
+    bottom: 2rem;
+  }
+
+  .heroBottomSections{
+    flex-direction:column;
+    padding:0px 0.5rem; 
+  }
+
+  .heroSubhead{
+    font-size:1.5rem;
+    line-height: 1.5em;
+    max-width : 95%;
+    font-weight:400;
+    font-family: "Poppins", serif;
+    margin-bottom:1.5rem
+  }
+
+  .grainOverlay{
+    display: none;
+  }
+
+  .heroBtnWrapper{
+    width:100%;
+  }
+
+  .heroJoinUs{
+    width:100%;
+    padding:0.8rem 9rem;
+    /* padding:0px; */
+  }
+
+  .heroRipple{
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .heroTopSection {
+    max-width: 100%;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .desktopHeading {
+    display: none;
+  }
+
+  .mobileHeading {
+    display: block;
+    font-size: 12vw;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .mobileHeading div {
+    margin-bottom: 0.1em;
+  }
+
+  .heroSubhead {
+    font-size: 1.5rem;
+    max-width: 95%;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .heroBottomSections {
+    bottom: 2rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .heroJoinUs {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 2rem;
+    display: block;
+  }
+
+  .lottieMain {
+    width: 300px;
+    opacity: 0.6;
+  }
+
+  .heroRipple {
+    top: 50%;
+  }
+}
