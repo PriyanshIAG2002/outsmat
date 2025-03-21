@@ -52,9 +52,9 @@ const App = () => {
 
   return (
     <>
-      {/* <AnimatePresence mode='wait'>
+      <AnimatePresence mode='wait'>
         {isLoading && <Preloader />}
-      </AnimatePresence> */}
+      </AnimatePresence>
       <>
         <Routes>
           <Route index path="/" element={<Home />} />
