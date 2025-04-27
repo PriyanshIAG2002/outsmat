@@ -11,6 +11,8 @@ import ourVisionImg from "./ourVisionImg.png"
 import accio from "./Accio Robotics Logo.png"
 import intugin from "./Intugine-logo.png.webp"
 import seosaph from "./Seosaph Logo.png"
+import whoarev from "./whoarev.png"
+import ourv from "./ourv.png"
 export {
     logo,
     ourvision,
@@ -25,4 +27,6 @@ export {
     accio,
     intugin,
     seosaph,
+    whoarev,
+    ourv
 }

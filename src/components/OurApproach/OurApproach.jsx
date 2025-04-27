@@ -66,8 +66,8 @@ const OurApproach = () => {
               <Lottie animationData={ripple} loop={true} className={`${styles.lottieRipple}`} />
             </div>
             <div className={`${styles.approachIntroBox}`}>
-              <h3 className={`${styles.rippleMainTitle}`}>Our approach to grow</h3>
-              <h1 className={`${styles.rippleMainSubtitle}`}>Your Business</h1>
+              <h3 className={`${styles.rippleMainTitle}`}>Navigating client acquisition</h3>
+              <h1 className={`${styles.rippleMainSubtitle}`}>The Outsmart Way</h1>
             </div>
           </div>
 

@@ -1,90 +1,106 @@
-.whoarewe{
-    width: 100%;
-    height: 100vh;
-    background-color: #F76A1E;
-    overflow: hidden;
+.ourGoal{
+    background:#88B7BD;
+    overflow:hidden;
 }
 
-.wvrLeft,.ourVisionHeading{
+.infoStripe{
+   width: 100%; 
+   height:50px;
+   background:#FCB683;
+   border-top:1px solid black;
+   border-bottom:1px solid black;
+   font-size:1rem;
+    font-weight : 500;
+    color:black;
+    line-height:1em;
+    text-align:left;
+    display: flex;
+    align-items:center;
+    padding-left: 2rem;
+}
+
+.ourVisionBox{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+.ourVisionBox{
+    margin-left: 2rem;
+}
+
+.ourVisionHead{
+    line-height: 1em;
+    color: #FFF4B8;
+    font-size: 6vw;
+    font-weight: 600;
+    font-family: "poppins", serif;
+}
+
+.ourVisionSubhead{
+    color: #FFF4B8;
+    font-size:1.8rem;
+    line-height: 1.5em;
+    font-weight:500;
+    font-family: "Poppins", serif;
+    margin-top: 1.2rem;
+    /* padding-left: 1rem; */
+    max-width:90%;
+}
+
+.ourGoalImgBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.ourGoalImgBox img{
+    width: 80%;
+}
+
+.ourVisionRow{
     height: 100%;
 }
 
-.wrvCover{
-    padding-left: 1rem;
-}
-
-.wrvNum{
-    color: #FFF4B8;
-    font-size: 5rem;
-    font-weight: 600;
-    font-family: "Montserrat", serif;
-}
-
-.wrvTitle{
-    color: #FFF4B8;
-    font-size:2.5rem;
-    line-height: 1em;
-    font-weight:700;
-    font-family: "Poppins", serif;
-    margin-top: 2rem;
-}
-
-.wrvSubTitle{
-    color: #FFF4B8;
-    font-size:1.5rem;
-    font-size:1.5rem;
-    line-height: 1.2em;
-    font-weight:400;
-    font-family: "Poppins", serif;
-    padding-left: 1rem;
-    margin-bottom: 5rem;
-}
-
 @media (max-width: 767px) {
-    .whoarewe{
+    .ourGoal{
         position: static !important;
       }
-    .wrvRow{
-        flex-direction: column-reverse;
-    }
-    .wrvCol2{
-        position: absolute;
-        opacity: 0.2;
-    }
-    .wvrLeft{
-        flex-direction: column;
-        margin-top: 1rem;
-    }
+.ourVisionRow{
+    flex-direction: column-reverse;
+    height: auto;
+}
 
-    .wrvCover{
-        margin-top: 1rem;
-    }
-    
-    .wrvMain{
-        height: 100%;
-    }
+.ourGoalImgBox{
+    margin-top: 7rem;
+}
+.ourVisionBox{
+    margin-top: 4rem;
+}
 
-    .wrvCol{
-        height: auto;
-    }
+.ourVisionHead{
+    line-height: 1em;
+    color: #FFF4B8;
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+}
 
-    .wrvNum{
-        font-size: 3rem;
-    }
-    
-    .wrvTitle{
-        font-weight: 600;
-        margin-top: 0.5rem;
-        font-size: 2rem;
-    }
+.ourVisionBox{
+    padding-left: 0px;
+}
 
-    .wrvSubTitle{
-        margin-top: 1rem;
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-    }
-
-    .heroJoinUs{
-        width: 95%;
-    }
+.ourVisionSubhead{
+    color: #FFF4B8;
+    font-size:1.2rem;
+    line-height: 1.2em;
+    font-weight:500;
+    font-family: "Poppins", serif;
+    margin-top: 1.5rem;
+    text-align: center;
+    padding-left: 0px;
+}
 }

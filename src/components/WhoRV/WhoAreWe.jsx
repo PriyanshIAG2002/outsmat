@@ -1,18 +1,18 @@
 import React, { useRef } from 'react';
 import styles from "./Who.module.css";
-import { Row, Col } from 'antd';
-import { whoAreWeData } from '../../constants';
+import { Row, Col } from "antd";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Lottie from "lottie-react";
-import { ripple } from '../../assets';
+import { ScrollTrigger } from "gsap/all";
+import { whoarev } from '../../assets';
 
-gsap.registerPlugin();
+gsap.registerPlugin(ScrollTrigger);
 
 const WhoAreWe = () => {
   const sectionRef = useRef(null);
-  const textRefs = useRef([]);
-  const lottieRef = useRef(null);
+  const headingRef = useRef(null);
+  const subheadingRef = useRef(null);
+  const imageRef = useRef(null);
 
   useGSAP(() => {
     // Entry animation timeline
@@ -20,67 +20,66 @@ const WhoAreWe = () => {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top 80%",
-        end: "top 20%",
+        end: "top 10%",
         scrub: true,
       }
     });
 
+    // Entry animations
     entryTl.fromTo(
-      textRefs.current,
-      { opacity: 0, y: -150 },
-      { opacity: 1, y: 0, duration: 1, stagger: 0.2 }
+      [headingRef.current, subheadingRef.current], 
+      { opacity: 0, y: -250 }, 
+      { opacity: 1, y: 0, duration: 1.5 },
     );
 
     entryTl.fromTo(
-      lottieRef.current,
-      { opacity: 0, y: -150, scale: 0.8 },
-      { opacity: 1, y: 0, scale: 1, duration: 1.5 },
-      "-=0.5"
+      imageRef.current, 
+      { opacity: 0, y: -150, filter: "blur(10px)" }, 
+      { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.5 },
+      "-=1"
     );
 
     // Exit animation timeline
     const exitTl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top -40%",
-        end: "top -100%",
+        start: "top -40%", // Start later when next section is more visible
+        end: "top -100%", // End when completely scrolled past
         scrub: true,
       }
     });
 
-    // Exit animations
+    // Exit animations - simplified to just downward movement
     exitTl.to(
-      textRefs.current,
-      { opacity: 0, y: 150, duration: 1, stagger: 0.2 }
+      [headingRef.current, subheadingRef.current],
+      { opacity: 0, y: 250, duration: 1.5 }
     );
 
     exitTl.to(
-      lottieRef.current,
+      imageRef.current,
       { opacity: 0, y: 150, duration: 1.5 },
-      "-=1"
+      "-=1.5"
     );
 
   }, []);
 
   return (
-    <div id="who-are-we" ref={sectionRef} className={`w-full h-screen sticky top-0 ${styles.whoarewe}`}>
-      <Row className={styles.wrvRow}>
-        <Col xl={16} lg={16} md={24} sm={24} xs={24} className={`h-screen ${styles.wrvCol}`}>
-          <div className={`flex h-full justify-center text-white ${styles.wvrLeft}`}>
-            {whoAreWeData.map((item, index) => (
-              <div key={item.ourVisionHeading} className={`border-r border-[#ffffff78] pr-10 flex flex-col justify-between ${index === 1 ? "wrvNoMobBorder" : ""}`} ref={el => textRefs.current[index] = el}>
-                <div className={styles.wrvCover}>
-                  {/* <h1 className={`${styles.wrvNum} overflow-hidden`}>{item.id}.</h1> */}
-                  <h2 className={`${styles.wrvTitle} overflow-hidden`}>{item.title}</h2>
-                </div>
-                <p className={`${styles.wrvSubTitle} overflow-hidden`}>{item.subtitle}</p>
-              </div>
-            ))}
+    <div id="vision" ref={sectionRef} className={`w-full h-screen sticky top-0 ${styles.ourGoal}`}>
+      <Row className={`${styles.ourVisionRow}`}>
+        <Col xl={14} lg={14} md={24} sm={24} xs={24}>
+          <div className={styles.ourVisionBox}>
+            <h1 ref={headingRef} className={styles.ourVisionHead}>Who are we?</h1>
+            <p ref={subheadingRef} className={styles.ourVisionSubhead}>
+            We empower early-stage companies with strategic sales consulting, offering comprehensive
+solutions for sales process optimization, business development, and lead generation.
+Together, we create a roadmap to engage and convert ideal customers, driving consistent
+and sustainable growth.
+            </p>
           </div>
         </Col>
-        <Col xl={8} lg={8} md={24} sm={24} xs={24} className={`h-screen ${styles.wrvCol} ${styles.wrvCol2}`}>
-          <div ref={lottieRef} className={`flex justify-center items-center w-full h-full`}>
-            <Lottie animationData={ripple} loop={true} className={`w-[400px]`} />
+        <Col xl={10} lg={10} md={24} sm={24} xs={24}>
+          <div className={styles.ourGoalImgBox}>
+            <img className="rounded-lg" ref={imageRef} src={whoarev} alt="our vision image" />
           </div>
         </Col>
       </Row>
@@ -89,3 +88,6 @@ const WhoAreWe = () => {
 };
 
 export default WhoAreWe;
+
+
+

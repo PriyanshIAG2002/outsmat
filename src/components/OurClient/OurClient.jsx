@@ -24,9 +24,7 @@ const OurClient = () => {
           <div>Our Valued</div>
           <div>Clients</div>
         </div>
-        <div className={styles.clientNames}>
-          {"Accio Robotics, Intugine, Seosaph"}
-        </div>
+        
       </div>
       <div className={styles.ourClientWall}>
         <LogoWall

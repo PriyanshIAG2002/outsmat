@@ -8,14 +8,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { motion } from "framer-motion"
 
-const mainText = "Sales beyond the inner circle.";
+const mainText = "Enabling Sales beyond the inner circle!";
 const mobileMainText = {
   line1: "Sales Beyond",
   line2: "The Inner",
   line3: "Circle"
 };
 
-const subText = "Explore the unexplored, with Team Outsmart";
+const subText = "Driving conversations beyond Boundaries.";
 
 const createRevealMask = (direction = "up", delay = 3) => ({
   initial: { y: direction === "up" ? "-100%" : "100%" },
@@ -125,7 +125,7 @@ const HeroBanner = () => {
               className={styles.heroJoinUs}
               onClick={handleJoinUsClick}
             >
-              Join Us
+              Connect with us
             </a>
           </motion.div>
         )}

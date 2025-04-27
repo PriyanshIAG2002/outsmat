@@ -4,7 +4,7 @@ import { Row, Col } from "antd";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
-import { ourVisionImg } from '../../assets';
+import { ourv } from '../../assets';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,14 +70,14 @@ const OurGoal = () => {
           <div className={styles.ourVisionBox}>
             <h1 ref={headingRef} className={styles.ourVisionHead}>Our Vision</h1>
             <p ref={subheadingRef} className={styles.ourVisionSubhead}>
-              To revolutionize the way early-stage startups approach sales, 
-              providing innovative strategies and tools that drive sustainable growth.
+            To revolutionize the way early-stage companies approach sales by providing
+            innovative strategies, solutions, and tools that drive sustainable growth.
             </p>
           </div>
         </Col>
         <Col xl={10} lg={10} md={24} sm={24} xs={24}>
           <div className={styles.ourGoalImgBox}>
-            <img ref={imageRef} src={ourVisionImg} alt="our vision image" />
+            <img className="rounded-lg shadow-lg" ref={imageRef} src={ourv} alt="our vision image" />
           </div>
         </Col>
       </Row>

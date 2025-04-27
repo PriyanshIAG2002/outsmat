@@ -15,81 +15,123 @@ export const whoAreWeData =  [
     {
         id: 1,
         imgsrc: s1, // Add the image URL here
-        title: "Building ICP",
-        subtitle: "We identify your ideal customer, map their needs, and build a prospect list to jumpstart your outreach campaigns."
+        title: "Discovery",
+        subtitle: `Together, we'll define your ideal customer and map their needs and pain points. We'll also
+build a list of potential prospects to help you kickstart the outreach campaigns.`
     },
     {
         id: 2,
         imgsrc: s2, // Add the image URL here
-        title: "The First 10",
-        subtitle: "Secure the critical first 10 customers or MVP participants to build momentum for your startup's success."
+        title: "Kick-Start",
+        subtitle: `With our targeted approach, we help budding startups secure the first 10 customers or MVP
+participants, giving them the momentum they need to kickstart their journey.`
     },
     {
         id: 3,
         imgsrc: s3, // Add the image URL here
-        title: "Sales Enablement",
-        subtitle: "Optimize your sales processes, train your team, and create winning client acquisition strategies."
+        title: "Expansion",
+        subtitle: `We become an extended team that manages outreach and lead generation for niche market
+segments or products, from discovery to setting up introductory calls.`
     },
     {
         id: 4,
         imgsrc: s4, // Add the image URL here
-        title: "Sales Outreach",
-        subtitle: "Manage lead generation and outreach activities, ensuring qualified leads and impactful introductory calls."
+        title: "Enablement",
+        subtitle: `We offer tailored guidance on initiating outreach, optimizing sales processes, building and
+training in-house teams, and developing effective client acquisition strategies.`
     }
 ];
 
 
-export const approachData = [
-    {
-      id: 1,
-      title: "Regular Progress Updates",
-      description: "We provide weekly reports to keep you informed of activities and progress.",
-      lottieImg: s4,
-    },
-    {
-      id: 2,
-      title: "Access to Tools and Data",
-      description: "We ensure full transparency with tools, databases, and communications.",
-      lottieImg: s4,
-    },
-    {
-      id: 3,
-      title: "Monthly Check-Ins",
-      description: "We conduct monthly meetings to review progress and address concerns.",
-      lottieImg: s2,
-    },
-    {
-      id: 4,
-      title: "Dedicated Team Oversight",
-      description: "We oversee your sales team with weekly performance reviews.",
-      lottieImg: s3,
-    },
-    {
-      id: 5,
-      title: "Strategic Planning",
-      description: "We develop quarterly plans with goal updates and adjustments.",
-      lottieImg: s2,
-    },
-    {
-      id: 6,
-      title: "Ethical Conduct",
-      description: "We protect your brand's reputation with integrity-driven actions.",
-      lottieImg: s2,
-    },
-    {
-      id: 7,
-      title: "Transparent Communication",
-      description: "All communications are reviewed and approved to align with your brand.",
-      lottieImg: s1,
-    },
-    {
-      id: 8,
-      title: "Collaborative Partnerships",
-      description: "We work closely with your team to ensure seamless integration.",
-      lottieImg: s2,
-    },
-  ];
+// export const approachData = [
+//     {
+//       id: 1,
+//       title: "Regular Progress Updates",
+//       description: "We provide weekly reports to keep you informed of activities and progress.",
+//       lottieImg: s4,
+//     },
+//     {
+//       id: 2,
+//       title: "Access to Tools and Data",
+//       description: "We ensure full transparency with tools, databases, and communications.",
+//       lottieImg: s4,
+//     },
+//     {
+//       id: 3,
+//       title: "Monthly Check-Ins",
+//       description: "We conduct monthly meetings to review progress and address concerns.",
+//       lottieImg: s2,
+//     },
+//     {
+//       id: 4,
+//       title: "Dedicated Team Oversight",
+//       description: "We oversee your sales team with weekly performance reviews.",
+//       lottieImg: s3,
+//     },
+//     {
+//       id: 5,
+//       title: "Strategic Planning",
+//       description: "We develop quarterly plans with goal updates and adjustments.",
+//       lottieImg: s2,
+//     },
+//     {
+//       id: 6,
+//       title: "Ethical Conduct",
+//       description: "We protect your brand's reputation with integrity-driven actions.",
+//       lottieImg: s2,
+//     },
+//     {
+//       id: 7,
+//       title: "Transparent Communication",
+//       description: "All communications are reviewed and approved to align with your brand.",
+//       lottieImg: s1,
+//     },
+//     {
+//       id: 8,
+//       title: "Collaborative Partnerships",
+//       description: "We work closely with your team to ensure seamless integration.",
+//       lottieImg: s2,
+//     },
+//   ];
   
+
+export const approachData = [
+  {
+    id: 1,
+    title: "Discovery",
+    description: `We conduct in-depth research on target markets, competitors, and client offerings to
+craft a data-driven sales strategy with clear use cases.`,
+    lottieImg: s4,
+  },
+  {
+    id: 2,
+    title: "Sales Copywriting",
+    description: `We create compelling outreach scripts and sales FAQs to ensure consistent and
+persuasive messaging across all interactions.`,
+    lottieImg: s4,
+  },
+  {
+    id: 3,
+    title: "Multi-Channel approach",
+    description: `We launch strategic outreach campaigns via email, LinkedIn, and other platforms,
+leveraging automation for maximum reach.`,
+    lottieImg: s2,
+  },
+  {
+    id: 4,
+    title: "Partnership development",
+    description: `Beyond direct outreach, we identify and build partnerships that generate new sales
+opportunities and expand market presence.`,
+    lottieImg: s3,
+  },
+  {
+    id: 5,
+    title: "Assisted follow-ups",
+    description: `We don’t stop at introductions—we support clients throughout the sales cycle,
+ensuring timely follow-ups to drive conversions.`,
+    lottieImg: s2,
+  },
+];
 
 
 
