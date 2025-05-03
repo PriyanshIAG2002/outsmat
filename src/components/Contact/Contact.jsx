@@ -9,7 +9,7 @@ import { ripple } from '../../assets';
 import emailjs from "emailjs-com";
 import { Slide, toast } from "react-toastify";
 import { motion } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -19,6 +19,7 @@ const Contact = () => {
     const contentRef = useRef(null);
     const formRef = useRef(null);
     const lottieRef = useRef(null);
+    const contactInfoRef = useRef(null);
     const form = useRef();
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
@@ -52,8 +53,8 @@ const Contact = () => {
         duration: 1
       }, "-=0.5");
 
-      // Exit animations for lottie
-      exitTl.to(lottieRef.current, {
+      // Exit animations for lottie and contact info
+      exitTl.to([lottieRef.current, contactInfoRef.current], {
         y: 100,
         opacity: 0,
         scale: 0.8,
@@ -139,7 +140,7 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className={`${styles.contactEmail}`}
+              className={`${styles.contactEmail} mb-16`}
             >
               <form onSubmit={handleSubmit} ref={form}>
                 <div className={styles.formContainer}>
@@ -185,7 +186,7 @@ const Contact = () => {
           </div>
         </Col>
         <Col xl={10} lg={10} md={24} sm={24} xs={24}>
-          <div className={`${styles.col2} ${styles.cols} bg-[#1d140a]`}>
+          <div className={`${styles.col2} ${styles.cols} bg-[#1d140a] relative`}>
             <motion.div 
               ref={lottieRef}
               initial={{ opacity: 0, scale: 0.8 }}
@@ -194,6 +195,38 @@ const Contact = () => {
               className={`flex justify-center items-center w-full h-full`}
             >
               <Lottie animationData={ripple} loop={true} className={`w-[400px]`} />
+            </motion.div>
+            
+            <motion.div
+              ref={contactInfoRef}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="absolute bottom-24 left-2 p-4 text-[#f76a1e5b] max-w-[80%] bg-[#1d140a] bg-opacity-80 rounded-md"
+            >
+              <div className="space-y-1.5 text-sm">
+                <div className="flex items-start">
+                  <FaMapMarkerAlt className="text-[#2E2111] mr-2 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold">Excel Business Foundry Pvt Ltd</p>
+                    <p>Nextcoworks, Alankar Plaza, Bk Circle, Nayak Layout, JP Nagar 8th Phase, Bengaluru, Karnataka 560078</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center">
+                  <FaPhone className="text-[#2E2111] mr-2 flex-shrink-0" />
+                  <div>
+                    <p>9597062534, 98866 67828</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center">
+                  <FaEnvelope className="text-[#2E2111] mr-2 flex-shrink-0" />
+                  <div>
+                    <p>Sathish@teamoutsmart.in, Shreeharsha@teamoutsmart.in</p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
         </Col>

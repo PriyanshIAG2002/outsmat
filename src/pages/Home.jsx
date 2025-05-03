@@ -11,7 +11,9 @@ import {
     Contact,
     Testimonials,
     Footer,
-    FooterHeading
+    FooterHeading,
+    MyTeam,
+    NormalFooter
  } from '../components'
 
 const Home = () => {
@@ -27,7 +29,7 @@ const Home = () => {
         </div>
         <OurGoal />
         <div className={`${styles.infoStripe} w-full h-[50px] bg-[#FCB683]`}>
-          What we offer ?
+          What do we offer ?
         </div>
         <OurServices />
         <div className={`${styles.infoStripe} w-full h-[50px] bg-[#FCB683]`}>
@@ -43,6 +45,10 @@ const Home = () => {
         </div>
         <Testimonials /> 
         <div className={`${styles.infoStripe} w-full h-[50px] bg-[#FCB683]`}>
+          Meet Our Team
+        </div>
+        <MyTeam />
+        <div className={`${styles.infoStripe} w-full h-[50px] bg-[#FCB683]`}>
           Contact Us
         </div>
         
@@ -50,7 +56,8 @@ const Home = () => {
         <Contact />
         <div className="sticky top-0">
           <FooterHeading />
-          <Footer />
+          {/* <Footer /> */}
+          <NormalFooter />
         </div>
     </div>
   )

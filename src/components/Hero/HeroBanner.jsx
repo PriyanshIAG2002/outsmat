@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from "./HeroBanner.module.css";
-import Lottie from "lottie-react";
 import { ripple } from '../../assets';
 import Tilt from 'react-parallax-tilt';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { motion } from "framer-motion"
+import Lottie from "lottie-react";
 
 const mainText = "Enabling Sales beyond the inner circle!";
 const mobileMainText = {
@@ -39,6 +39,27 @@ const HeroBanner = () => {
     }, 3000); // 3 seconds for preloader
 
     return () => clearTimeout(preloaderTimer);
+  }, []);
+
+  useEffect(() => {
+    UnicornStudio.addScene({
+      elementId: "gravityCoding", // id of the HTML element to render your scene in (the scene will use its dimensions)
+      fps: 100, // frames per second (0-120) [optional]
+      scale: 1,
+      dpi: 1, // pixel ratio [optional]
+      lazyLoad: true, // will not initialize the scene until it scrolls into view
+      filePath: "./effect.json",
+      interactivity: {
+        mouse: {
+          disableMobile: true, // disable touch movement on mobile
+        },
+      },
+    })
+      .then((scene) => {
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }, []);
 
   useEffect(() => {
@@ -77,6 +98,9 @@ const HeroBanner = () => {
 
   return (
     <div className={`w-full h-screen sticky top-0 ${styles.heroBanner}`}>
+     <div className="background container-fluid z-[9999909999999]">
+          <div className="unicorn-embed" id="gravityCoding"></div>
+        </div>
       <div className={styles.grainOverlay} />
 
       <div className={`${styles.heroTopSection}`}>
@@ -98,7 +122,7 @@ const HeroBanner = () => {
       </div>
 
       <div className={`absolute ${styles.heroRipple}`}>
-        <Lottie animationData={ripple} loop={true} className={`w-[550px] ${styles.lottieMain}`} />
+        <Lottie animationData={ripple} alt="Ripple effect" className={`w-[550px] ${styles.lottieMain}`} />
       </div>
 
       <div className={`${styles.heroBottomSections}`} ref={containerRef}>

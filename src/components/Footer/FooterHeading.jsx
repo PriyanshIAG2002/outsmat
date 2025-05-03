@@ -8,7 +8,7 @@ const FooterHeading = () => {
       <div className={styles.footerSubheading2}>
         <div className={`text-[#FFF4B8]`}>Innovate</div>
         <div className={`text-[#FFF4B8]`}>Collaborate</div>
-        <div className={`text-[#FFF4B8]`}>Grow</div>
+        <div className={`text-[#FFF4B8]`}>Accelerate</div>
       </div>
     </div>
   )

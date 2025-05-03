@@ -10,6 +10,8 @@ import Contact from "./Contact/Contact.jsx"
 import Testimonials from "./Testimonials/Test.jsx"
 import Footer from "./Footer/Footer.jsx"
 import FooterHeading from "./Footer/FooterHeading.jsx"
+import MyTeam from "./MyTeam/MyTeam.jsx"
+import NormalFooter from "./Footer/NormalFooter.jsx"
 
 export {
     Preloader,
@@ -22,5 +24,7 @@ export {
     OurClient,
     Contact,
     Testimonials,
-    FooterHeading
+    FooterHeading,
+    MyTeam,
+    NormalFooter
 }

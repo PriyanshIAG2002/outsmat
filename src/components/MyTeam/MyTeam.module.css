@@ -1,0 +1,206 @@
+.teamSection {
+  padding: 4rem 2rem;
+  background: #FBF4D7;
+  position: relative;
+  min-height: 80vh;
+}
+
+.teamHeadingContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.teamHeading {
+  font-size: 3vw;
+  font-weight: 700;
+  font-family: "Montserrat", serif;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.meetThe {
+  color: #2E2111;
+}
+
+.team {
+  color: #2E2111;
+}
+
+.teamMembersContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teamRow {
+  display: flex;
+  justify-content: center;
+}
+
+.teamCol {
+  display: flex;
+  justify-content: center;
+}
+
+.memberCard {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.memberImageContainer {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding: 10px;
+  background: #FCB683;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memberImage {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memberImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.memberDetails {
+  text-align: center;
+  width: 100%;
+}
+
+.nameWithLinkedIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.linkedInLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.linkedInIcon {
+  color: #0A66C2;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.memberName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2E2111;
+  margin: 0;
+  font-family: "Montserrat", serif;
+}
+
+.memberTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2E2111;
+  margin: 0 0 1rem 0;
+  font-family: "Montserrat", serif;
+}
+
+.memberDescription {
+  font-size: 0.95rem;
+  color: #2E2111;
+  line-height: 1.6;
+  font-family: "Poppins", serif;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .teamHeading {
+    font-size: 2.5rem;
+  }
+  
+  .memberImageContainer {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .memberImage {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .teamSection {
+    padding: 3rem 1rem;
+  }
+  
+  .teamHeading {
+    font-size: 2rem;
+  }
+  
+  .memberCard {
+    margin-bottom: 3rem;
+  }
+  
+  .memberImageContainer {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .memberImage {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .memberName {
+    font-size: 1.3rem;
+  }
+  
+  .memberTitle {
+    font-size: 1.1rem;
+  }
+  
+  .memberDescription {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .teamSection {
+    padding: 2rem 1rem;
+  }
+  
+  .teamHeading {
+    font-size: 1.8rem;
+  }
+  
+  .memberImageContainer {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .memberImage {
+    width: 120px;
+    height: 120px;
+  }
+}

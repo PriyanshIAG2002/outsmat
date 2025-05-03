@@ -1,8 +1,6 @@
 import React, { useRef } from 'react';
 import styles from "./OurService.module.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Lottie from "lottie-react";
-import { ripple } from '../../assets';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
@@ -87,15 +85,7 @@ const OurServices = () => {
       >
         {serviceData.map((service, index) => (
           <SwiperSlide key={service.id}>
-            <Row className={`w-full h-full border-l ${styles.ourServiceRow}`}>
-              <Col className={`w-full h-full ${styles.ourServiceCol}`} xl={10} lg={10} md={24} sm={24} xs={24}>
-                <div
-                  ref={(el) => (imageRefs.current[index] = el)}
-                  className={`flex justify-center items-center w-full h-full ${styles.ourLootieBox}`}
-                >
-                  <Lottie animationData={service.imgsrc} loop={true} className={`${styles.lootieStyle}`} />
-                </div>
-              </Col>
+            <Row className={`w-full h-full ${styles.ourServiceRow}`}>
               <Col className={`w-full h-full ${styles.ourServiceCol}`} xl={14} lg={14} md={24} sm={24} xs={24}>
                 <div className={styles.ourVisionBox}>
                   <h1 ref={(el) => (headingRefs.current[index] = el)} className={styles.ourVisionHead}>
@@ -104,6 +94,18 @@ const OurServices = () => {
                   <p ref={(el) => (subheadingRefs.current[index] = el)} className={styles.ourVisionSubhead}>
                     {service.subtitle}
                   </p>
+                </div>
+              </Col>
+              <Col className={`w-full h-full ${styles.ourServiceCol}`} xl={10} lg={10} md={24} sm={24} xs={24}>
+                <div
+                  ref={(el) => (imageRefs.current[index] = el)}
+                  className={styles.ourLootieBox}
+                >
+                  <img 
+                    src={service.imgsrc} 
+                    alt={service.title} 
+                    className={styles.lootieStyle} 
+                  />
                 </div>
               </Col>
             </Row>

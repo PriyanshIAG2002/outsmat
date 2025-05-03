@@ -1,6 +1,8 @@
-import {s1,s2,s3,s4, accio,
-  intugin,
-  seosaph,} from "../assets"
+import {s1,s2,s3,s4,
+  text1,
+  text2,
+  text3
+} from "../assets"
 
 
 export const whoAreWeData =  [
@@ -141,19 +143,19 @@ ensuring timely follow-ups to drive conversions.`,
       id: 1,
       company: "Accio Robotics",
       content: "Partnering with Teamoutsmart has been a pivotal moment for Accio Robotics. Their ability to consistently generate high-quality leads and set up meaningful calls has not only streamlined our outreach but also accelerated our growth. Their strategic approach has opened new doors for us, and we're excited about the opportunities that lie ahead.",
-      src : accio
+      src : text1
     },
     {
       id: 2,
       company: "Seosaph Intotech",
       content: "Teamoutsmart has redefined what lead generation means for Seosaph Infotech. Their dedication to understanding our needs and crafting tailored strategies has resulted in a remarkable increase in client engagement. The efficiency and quality of the scheduled calls have allowed us to focus on delivering innovative solutions to our clients.",
-      src : seosaph
+      src : text2
     },
     {
       id: 3,
       company: "Intugine",
       content: "At Intugine, we value results and efficiency, and Teamoutsmart has delivered on both fronts. Their expert lead generation and seamless call scheduling have not only boosted our conversion rates but also enriched our overall customer interactions. This collaboration has been a game-changer, empowering us to scale new heights in our business endeavors.",
-      src : intugin
+      src : text3
     }
   ]; 
 

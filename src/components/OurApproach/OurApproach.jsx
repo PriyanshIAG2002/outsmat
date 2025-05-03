@@ -2,9 +2,9 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from "./OurApproach.module.css"
-import Lottie from "lottie-react";
 import { ripple } from '../../assets';
 import {  approachData } from "../../constants"
+import Lottie from "lottie-react";
 const OurApproach = () => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
@@ -63,7 +63,7 @@ const OurApproach = () => {
 
           <div className={`${styles.scrollSection} ${styles.scrollSectionIntro}`}>
             <div className={`${styles.rippleMain}`}>
-              <Lottie animationData={ripple} loop={true} className={`${styles.lottieRipple}`} />
+              <Lottie animationData={ripple} alt="Ripple effect" className={`${styles.lottieRipple}`} />
             </div>
             <div className={`${styles.approachIntroBox}`}>
               <h3 className={`${styles.rippleMainTitle}`}>Navigating client acquisition</h3>
@@ -75,7 +75,7 @@ const OurApproach = () => {
             <div key={item.id} className={`${styles.scrollSection} scroll-section`}>
               <div className={styles.contentBox}>
                 <div className={styles.imageWrapper}>
-                  <Lottie animationData={item.lottieImg} loop={true} />
+                  <img src={item.lottieImg} alt={item.title} />
                   <div className={`${styles.itemNumber}`}>
                     {item.id}
                   </div>
