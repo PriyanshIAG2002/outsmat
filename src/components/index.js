@@ -26,5 +26,5 @@ export {
     Testimonials,
     FooterHeading,
     MyTeam,
-    NormalFooter
+    NormalFooter,
 }

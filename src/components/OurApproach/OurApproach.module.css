@@ -59,18 +59,44 @@
     padding-top: 1rem;
 }
 
-/* White Rectangle Box */
-.imageWrapper {
-    width: 400px;
-    height: 600px;
+/* Card Background - the outer white card */
+.cardBackground {
+    width: 480px;
+    height: 700px;
     background: white;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+    padding-top: 15px;
+    position: relative;
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Image Wrapper - the inner card */
+.imageWrapper {
+    width: 440px;
+    height: 610px;
+    background: #f8f8f8;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     align-items: space-between;
     justify-content: space-between;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 85%;
+    object-fit: contain;
+    object-position: center;
+    /* box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); */
 }
 
 .textWrapper{
@@ -143,60 +169,151 @@
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
 }
 
+.cardBackground:hover {
+    transform: translateY(-10px) rotate(-2deg);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.polaroidCaption {
+    position: absolute;
+    bottom: 15px;
+    font-family: "Caveat", cursive;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 767px) {
+    .scrollContainer {
+        height: 85vh;
+    }
+
+    .scrollSectionInner {
+        height: 85vh;
+    }
+
     .scrollSection {
         width: 200vw;
         padding: 0 2rem;
+        height: 85vh;
     }
 
     .scrollSectionIntro {
         width: 250vw;
     }
 
+    .rippleMain {
+        margin-left: 2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .lottieRipple {
+        width: 120px;
+        margin-right: 1rem;
+    }
+
     .rippleMainTitle{
-        line-height: 1em;
-        color: #FFF4B8;
+        line-height: 1.2em;
         font-size: 1.5rem;
-        font-weight: 600;
     }
 
     .rippleMainSubtitle{
-        line-height: 1em;
-        color: #FFF4B8;
-        font-size: 4rem;
-        font-weight: 600;
-        padding-top: 0.5rem;
-    }
-
-    .wrapperTitle {
-        font-size: 1.5rem;
-        padding: 0.8rem 0.5rem;
-    }
-    
-    .subTitle {
         line-height: 1.2em;
-        font-size: 1rem;
-        font-weight: 600;
-        font-family: 'Poppins', Times, serif;
-        letter-spacing: 0.01em;
-        max-width: 300px;
-        margin-top: 1rem;
-    }
-
-    .textWrapper{
-        position: relative;
-        bottom: 48px;
-        right: 4rem;
+        font-size: 3rem;
+        padding-top: 0.5rem;
     }
 
     .contentBox {
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 1.5rem;
+    }
+
+    .cardBackground {
+        width: 280px;
+        height: 400px;
+        padding-top: 10px;
+        transform: rotate(-1deg);
     }
 
     .imageWrapper {
-        width: 300px;
-        height: 450px;
+        width: 250px;
+        height: 340px;
+    }
+
+    .textWrapper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        bottom: 0;
+        right: 0;
+        width: 280px;
+        margin-top: -30px;
+    }
+
+    .wrapperTitle {
+        font-size: 1.3rem;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .subTitle {
+        line-height: 1.3em;
+        font-size: 0.9rem;
+        max-width: 100%;
+        margin-top: 0;
+        padding: 0.5rem;
+    }
+
+    .polaroidCaption {
+        font-size: 1.5rem;
+        bottom: 8px;
+    }
+
+    .itemNumber {
+        font-size: 4rem;
+        padding-left: 1rem;
+        padding-bottom: 0.3rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .cardBackground {
+        width: 240px;
+        height: 350px;
+    }
+
+    .imageWrapper {
+        width: 220px;
+        height: 300px;
+    }
+
+    .textWrapper {
+        width: 240px;
+    }
+
+    .wrapperTitle {
+        font-size: 1.1rem;
+    }
+    
+    .subTitle {
+        font-size: 0.8rem;
+    }
+
+    .rippleMainTitle {
+        font-size: 1.2rem;
+    }
+
+    .rippleMainSubtitle {
+        font-size: 2.5rem;
+    }
+
+    .lottieRipple {
+        width: 100px;
     }
 }

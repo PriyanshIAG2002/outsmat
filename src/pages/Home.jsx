@@ -10,10 +10,9 @@ import {
     OurClient,
     Contact,
     Testimonials,
-    Footer,
     FooterHeading,
     MyTeam,
-    NormalFooter
+    NormalFooter,
  } from '../components'
 
 const Home = () => {
@@ -55,7 +54,6 @@ const Home = () => {
 
         <Contact />
         <div className="sticky top-0">
-          <FooterHeading />
           {/* <Footer /> */}
           <NormalFooter />
         </div>

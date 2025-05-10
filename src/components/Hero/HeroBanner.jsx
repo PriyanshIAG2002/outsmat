@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from "./HeroBanner.module.css";
 import { ripple } from '../../assets';
-import Tilt from 'react-parallax-tilt';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { motion } from "framer-motion"
 import Lottie from "lottie-react";
+import Tilt from 'react-parallax-tilt';
+
 
 const mainText = "Enabling Sales beyond the inner circle!";
 const mobileMainText = {
@@ -30,36 +31,16 @@ const HeroBanner = () => {
   const [isPreloaded, setIsPreloaded] = useState(false);
   const wordsRef = useRef([]);
   const containerRef = useRef(null);
+  const unicornRef = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
     const preloaderTimer = setTimeout(() => {
       setIsPreloaded(true);
-    }, 3000); // 3 seconds for preloader
+    }, 2500); // 3 seconds for preloader
 
     return () => clearTimeout(preloaderTimer);
-  }, []);
-
-  useEffect(() => {
-    UnicornStudio.addScene({
-      elementId: "gravityCoding", // id of the HTML element to render your scene in (the scene will use its dimensions)
-      fps: 100, // frames per second (0-120) [optional]
-      scale: 1,
-      dpi: 1, // pixel ratio [optional]
-      lazyLoad: true, // will not initialize the scene until it scrolls into view
-      filePath: "./effect.json",
-      interactivity: {
-        mouse: {
-          disableMobile: true, // disable touch movement on mobile
-        },
-      },
-    })
-      .then((scene) => {
-      })
-      .catch((err) => {
-        console.error(err);
-      });
   }, []);
 
   useEffect(() => {
@@ -98,28 +79,35 @@ const HeroBanner = () => {
 
   return (
     <div className={`w-full h-screen sticky top-0 ${styles.heroBanner}`}>
-     <div className="background container-fluid z-[9999909999999]">
-          <div className="unicorn-embed" id="gravityCoding"></div>
-        </div>
+      {/* Unicorn Studio */}
+      {/* Unicorn Studio Ends */}
       <div className={styles.grainOverlay} />
+     
+        <div className={`${styles.heroTopSection}`}>
+        <Tilt 
+          tiltAxis={"y"}
+          tiltMaxAngleX={2}
+          tiltMaxAngleY={2}
+          className={styles.tiltWrapper || "relative"}
+        >
+          {isPreloaded && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className={styles.mainHeading}
+            >
+              <span className={styles.desktopHeading}>{mainText}</span>
+              <div className={styles.mobileHeading}>
+                <div>{mobileMainText.line1}</div>
+                <div>{mobileMainText.line2}</div>
+                <div>{mobileMainText.line3}</div>
+              </div>
+            </motion.div>
+          )}
+      </Tilt>
 
-      <div className={`${styles.heroTopSection}`}>
-        {isPreloaded && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className={styles.mainHeading}
-          >
-            <span className={styles.desktopHeading}>{mainText}</span>
-            <div className={styles.mobileHeading}>
-              <div>{mobileMainText.line1}</div>
-              <div>{mobileMainText.line2}</div>
-              <div>{mobileMainText.line3}</div>
-            </div>
-          </motion.div>
-        )}
-      </div>
+        </div>
 
       <div className={`absolute ${styles.heroRipple}`}>
         <Lottie animationData={ripple} alt="Ripple effect" className={`w-[550px] ${styles.lottieMain}`} />

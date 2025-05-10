@@ -3,6 +3,21 @@
     height: 100vh;
     background-color: #88B7BD;
     overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+.swiperContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.swiperSlide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ourVisionBox{
@@ -102,6 +117,14 @@
 .ourServiceRow{
     /* border-left: 1px solid #FFF4B8; */
     border: none;
+    width: 100%;
+    display: flex;
+}
+
+.ourServiceCol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ourLootieBox{
@@ -123,37 +146,65 @@
     border-radius: 8px;
 }
 
+@media (max-width: 992px) {
+    .ourVisionHead {
+        font-size: 4rem;
+    }
+    
+    .ourVisionSubhead {
+        font-size: 1.5rem;
+    }
+    
+    .ourVisionBox {
+        padding-left: 3rem;
+    }
+}
+
 @media (max-width: 767px) {
-  .ourservice{
-    position: relative;
-  }
-    .lootieStyle{
+    .ourservice {
+        position: relative;
+        height: 100vh;
+    }
+    
+    .swiperContainer {
+        height: 100%;
+        padding-bottom: 2rem;
+    }
+    
+    .swiperSlide {
+        height: auto;
+        min-height: 90vh;
+    }
+    
+    .lootieStyle {
         width: 85%;
         max-height: 30vh;
         margin: 0 auto;
         border-radius: 8px;
     }
-      .ourServiceRow{
+    
+    .ourServiceRow {
         height: auto;
         flex-direction: column-reverse;
-      }
+        padding-top: 2rem;
+    }
 
-      .ourVisionBox{
-        padding-left: 1rem;
-        padding-right: 1rem;
-        margin-top: 5rem;
-      }
+    .ourVisionBox {
+        padding: 1rem;
+        margin-top: 1rem;
+        height: auto;
+        text-align: center;
+    }
 
-      .ourVisionHead{
+    .ourVisionHead {
         font-size: 2.2rem;
         line-height: 1.3em;
         word-wrap: break-word;
         overflow-wrap: break-word;
+        text-align: center;
     }
-    .ourServiceRow{
-        border: none;
-    }
-    .ourVisionSubhead{
+    
+    .ourVisionSubhead {
         color: #FFF4B8;
         font-size: 1.2rem;
         line-height: 1.4em;
@@ -162,27 +213,59 @@
         margin-top: 1rem;
         word-wrap: break-word;
         overflow-wrap: break-word;
+        text-align: center;
+        max-width: 100%;
+        padding-right: 0;
     }
 
-    .ourLootieBox{
+    .ourLootieBox {
         margin-top: 1rem;
         padding: 0.5rem;
         height: auto;
         min-height: 30vh;
     }
     
-    .leftNavButton,
-    .rightNavButton {
-        position: static;
-        transform: none;
-    }
-
     .navButtons {
-        bottom: 20px;
+        position: absolute;
+        bottom: 40px;
         top: auto;
+        height: auto;
         display: flex;
         justify-content: center;
         gap: 20px;
+    }
+    
+    .leftNavButton,
+    .rightNavButton {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .ourservice {
+        height: 100vh;
+    }
+    
+    .ourVisionHead {
+        font-size: 1.8rem;
+        display: none;
+    }
+    
+    .ourVisionSubhead {
+        font-size: 1rem;
+    }
+    
+    .lootieStyle {
+        width: 90%;
+        max-height: 25vh;
+        margin-top: 3rem;
     }
 }
 

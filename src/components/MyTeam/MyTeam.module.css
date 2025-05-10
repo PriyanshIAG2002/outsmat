@@ -2,7 +2,10 @@
   padding: 4rem 2rem;
   background: #FBF4D7;
   position: relative;
-  min-height: 80vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .teamHeadingContainer {
@@ -152,14 +155,21 @@
 @media screen and (max-width: 767px) {
   .teamSection {
     padding: 3rem 1rem;
+    min-height: 100vh;
   }
   
   .teamHeading {
     font-size: 2rem;
   }
   
+  .teamRow {
+    flex-direction: column;
+    align-items: center;
+  }
+  
   .memberCard {
     margin-bottom: 3rem;
+    max-width: 300px;
   }
   
   .memberImageContainer {
@@ -182,25 +192,40 @@
   
   .memberDescription {
     font-size: 0.9rem;
+    padding: 0 0.5rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .teamSection {
-    padding: 2rem 1rem;
+    padding: 2rem 0.5rem;
+  }
+  
+  .teamHeadingContainer {
+    margin-bottom: 2rem;
   }
   
   .teamHeading {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   
   .memberImageContainer {
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
+    padding: 8px;
   }
   
   .memberImage {
-    width: 120px;
-    height: 120px;
+    width: 114px;
+    height: 114px;
+  }
+  
+  .memberDetails {
+    padding: 0 1rem;
+  }
+  
+  .memberDescription {
+    font-size: 0.85rem;
+    padding: 0;
   }
 }

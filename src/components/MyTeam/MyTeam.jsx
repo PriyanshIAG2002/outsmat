@@ -46,7 +46,7 @@ const MyTeam = () => {
       </div>
 
       <div className={styles.teamMembersContainer}>
-        <Row gutter={[32, 32]} className={styles.teamRow}>
+        <Row gutter={[16, 32]} className={styles.teamRow}>
           {teamMembers.map((member) => (
             <Col key={member.id} xs={24} sm={24} md={8} lg={8} xl={8} className={styles.teamCol}>
               <div className={styles.memberCard}>
@@ -63,6 +63,7 @@ const MyTeam = () => {
                       target="_blank" 
                       rel="noopener noreferrer"
                       className={styles.linkedInLink}
+                      aria-label={`${member.name}'s LinkedIn profile`}
                     >
                       <FaLinkedin className={styles.linkedInIcon} />
                       <h3 className={styles.memberName}>{member.name}</h3>

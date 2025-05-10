@@ -1,4 +1,3 @@
-
 import React from 'react'
 import styles from "./Footer.module.css"
 import { footerData } from "../../constants"
@@ -15,27 +14,29 @@ const Footer = () => {
   };
 
   return (
-    <div className={`${styles.footer} bg-[#1d140a]`}>
-      <div className={`flex justify-between ${styles.boxMain}`}>
-        <PhotoGrid gridNumber={16} />
-        <div className={`${styles.footerBox}`}>
+    <div className={`${styles.footerContainer}`}>
+      <div className={`flex flex-col md:flex-row justify-between ${styles.boxMain}`}>
+        <div className="hidden md:block">
+          <PhotoGrid gridNumber={16} />
+        </div>
+        <div className={`${styles.footerBox} py-4 md:py-0`}>
           {footerData.map((data, i) => (
-            <div key={i}>
-              <h3 className={`text-center uppercase ${styles.footerHeading}`}>{data.heading}</h3>
-              <ul>
+            <div key={i} className="mb-2">
+              <h3 className={`text-left uppercase ${styles.footerHeading}`}>{data.heading}</h3>
+              <ul className="w-full">
                 {data.content.map((item) => (
-                  <li key={item.id} className={`flex items-start ${styles.mainBox}`}>
-                    <p className={`w-1/2 text-right ${styles.footerTitle}`}>{item.title}</p>
+                  <li key={item.id} className={`flex flex-col md:flex-row md:items-start items-start ${styles.mainBox}`}>
+                    <p className={`md:w-1/2 w-full md:text-right text-left px-2 ${styles.footerTitle}`}>{item.title}</p>
                     {item.title === "Website Navigation" ? (
                       <a
-                        className={`w-1/2 ml-5 text-left uppercase ${styles.footersubHeading}`}
+                        className={`md:w-1/2 w-full md:ml-5 md:text-left text-left px-2 uppercase ${styles.footersubHeading}`}
                         onClick={() => handleNavigationClick(item.href)}
                       >
                         {item.nav}
                       </a>
                     ) : item.title === "Social Media" ? (
                       <a
-                        className={`w-1/2 ml-5 text-left uppercase ${styles.footersubHeading}`}
+                        className={`md:w-1/2 w-full md:ml-5 md:text-left text-left px-2 uppercase ${styles.footersubHeading}`}
                         href={`https://instagram.com`}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -44,7 +45,7 @@ const Footer = () => {
                       </a>
                     ) : item.title === "Extra" ? (
                       <a
-                        className={`w-1/2 ml-5 text-left uppercase ${styles.footersubHeading}`}
+                        className={`md:w-1/2 w-full md:ml-5 md:text-left text-left px-2 uppercase ${styles.footersubHeading}`}
                         href={`https://youtube.com`}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -52,7 +53,7 @@ const Footer = () => {
                         {item.nav}
                       </a>
                     ) : (
-                      <span className={`w-1/2 ml-5 text-left uppercase ${styles.footersubHeading}`}>
+                      <span className={`md:w-1/2 w-full md:ml-5 md:text-left text-left px-2 uppercase ${styles.footersubHeading}`}>
                         {item.nav}
                       </span>
                     )}
@@ -62,7 +63,9 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <PhotoGrid gridNumber={16} />
+        <div className="hidden md:block">
+          <PhotoGrid gridNumber={16} />
+        </div>
       </div>
     </div>
   );

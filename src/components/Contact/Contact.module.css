@@ -37,7 +37,7 @@
 
 .contactEmail{
     position: absolute;
-    bottom: 3rem;
+    bottom: 30%;
     left: 3rem;
     right: 3rem;
     width: calc(100% - 6rem);
@@ -121,10 +121,16 @@
     transform: translateX(5px);
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 @media (max-width: 767px) {
     .cols {
         height: auto;
-        min-height: 100vh;
+        min-height: unset;
         padding: 1rem 0;
         position: relative;
     }
@@ -132,6 +138,7 @@
     .contactUs{
         position: static !important;
         height: auto;
+        min-height: 100vh;
     }
 
     .contactContent{
@@ -182,7 +189,13 @@
     }
 
     .col2{
-        display: none;
+        min-height: 250px;
+        padding: 1.5rem;
+        background-color: #2E2111 !important;
+    }
+    
+    .row {
+        flex-direction: column;
     }
 }
 
@@ -200,12 +213,22 @@
         font-size: 1rem;
         padding: 0.7rem 0.5rem;
     }
+    
+    .col2 {
+        min-height: 220px;
+        padding: 1rem;
+    }
 }
 
 @media (max-height: 600px) and (orientation: landscape) {
     .cols {
         height: auto;
-        min-height: 100vh;
+        min-height: unset;
+    }
+
+    .contactUs {
+        height: auto;
+        position: static !important;
     }
 
     .contactEmail {
@@ -221,6 +244,10 @@
     }
 
     .col2 {
-        min-height: 300px;
+        min-height: 220px;
+    }
+    
+    .row {
+        flex-direction: column;
     }
 }
