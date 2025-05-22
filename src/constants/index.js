@@ -52,21 +52,21 @@ export const approachData = [
     title: "Discovery",
     description: `We conduct in-depth research on target markets, competitors, and client offerings to
 craft a data-driven sales strategy with clear use cases.`,
-    lottieImg: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1746378352/ChatGPT_Image_May_4_2025_10_35_32_PM_szgpvy.png",
+    lottieImg: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1747561890/ChatGPT_Image_May_4_2025_10_35_32_PM_szgpvy_1_1_1_keplgb.png",
   },
   {
     id: 2,
     title: "Sales Copywriting",
     description: `We create compelling outreach scripts and sales FAQs to ensure consistent and
 persuasive messaging across all interactions.`,
-    lottieImg: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1746379082/ChatGPT_Image_May_4_2025_10_47_51_PM_gi0oyc.png",
+    lottieImg: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1747561891/ChatGPT_Image_May_4_2025_10_47_51_PM_gi0oyc_1_1_khngrh.png",
   },
   {
     id: 3,
     title: "Multi-Channel approach",
     description: `We launch strategic outreach campaigns via email, LinkedIn, and other platforms,
 leveraging automation for maximum reach.`,
-lottieImg: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1746827412/ChatGPT_Image_May_10__2025__03_12_11_AM-removebg-preview_1_f2f0os.png",
+lottieImg: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1747561890/Frame_48096281_jzckap.png",
 
   },
   {
@@ -74,7 +74,7 @@ lottieImg: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1746827412/ChatGP
     title: "Partnership development",
     description: `Beyond direct outreach, we identify and build partnerships that generate new sales
 opportunities and expand market presence.`,
-lottieImg: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1746827468/ChatGPT_Image_May_10__2025__03_14_44_AM-removebg-preview_lwndn3.png",
+lottieImg: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1747561891/Frame_48096282_ae0enp.png",
 
   },
   {
@@ -82,7 +82,7 @@ lottieImg: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1746827468/ChatGP
     title: "Assisted follow-ups",
     description: `We don’t stop at introductions—we support clients throughout the sales cycle,
 ensuring timely follow-ups to drive conversions.`,
-lottieImg: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1746827495/ChatGPT_Image_May_10__2025__03_17_17_AM-removebg-preview_ov3lr1.png",
+lottieImg: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1747561892/ChatGPT_Image_May_10_2025_03_17_17_AM_f3a91h_1_u3prwn.png",
 
   },
 ];

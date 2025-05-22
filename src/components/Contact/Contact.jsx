@@ -6,6 +6,7 @@ import { Slide, toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { FaArrowRight, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
+import { logo } from '../../assets';
 
 const Contact = () => {
     const form = useRef();
@@ -15,6 +16,10 @@ const Contact = () => {
       email: "",
       company: "",
     });
+
+    // Arrays for contact information
+    const phoneNumbers = ["9597062534", "9886667828"];
+    const emailAddresses = ["Sathish@teamoutsmart.in", "Shreeharsha@teamoutsmart.in"];
 
     const handleChange = (e) => {
       const { name, value } = e.target;
@@ -74,7 +79,7 @@ const Contact = () => {
     };
 
   return (
-    <div id="contact" className={`${styles.contactUs} w-full h-screen sticky top-0`}>
+    <div id="contact" className={`${styles.contactUs} w-full h-screen`}>
       <Row className={styles.row}>
         <Col xl={14} lg={14} md={24} sm={24} xs={24}>
           <div className={`${styles.col1} ${styles.cols} bg-[#2E2111] flex flex-col justify-center items-start`}>
@@ -143,8 +148,11 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="p-4 w-[90%] md:max-w-[80%] text-[#f76a1e5b] bg-[#1d140a] bg-opacity-80 rounded-md"
+              className="p-5 w-[95%] md:max-w-[80%] text-[#f76a1e5b] bg-[#1d140a] bg-opacity-80 rounded-lg"
             >
+              <div className="flex justify-center mb-6">
+                <img src={logo} alt="Outsmart Logo" className="h-16" />
+              </div>
               <div className="space-y-3 text-sm">
                 <div className="flex items-start">
                   <FaMapMarkerAlt className="text-[#F76A1E] mr-2 mt-1 flex-shrink-0 text-lg" />
@@ -154,17 +162,32 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center">
-                  <FaPhone className="text-[#F76A1E] mr-2 flex-shrink-0 text-lg" />
-                  <div>
-                    <p className="text-[#fd7024cc]">9597062534, 98866 67828</p>
+                <div className="flex items-start">
+                  <FaPhone className="text-[#F76A1E] mr-2 mt-1 flex-shrink-0 text-lg" />
+                  <div className="flex flex-wrap gap-2">
+                    {phoneNumbers.map((phone, index) => (
+                      <span 
+                        key={index} 
+                        className="inline-block px-3 py-1 bg-[#2E2111] text-[#fd7024cc] rounded-full text-sm"
+                      >
+                        {phone}
+                      </span>
+                    ))}
                   </div>
                 </div>
                 
-                <div className="flex items-center">
-                  <FaEnvelope className="text-[#F76A1E] mr-2 flex-shrink-0 text-lg" />
-                  <div className="break-words">
-                    <p className="text-[#fd7024cc]">Sathish@teamoutsmart.in, Shreeharsha@teamoutsmart.in</p>
+                <div className="flex items-start">
+                  <FaEnvelope className="text-[#F76A1E] mr-2 mt-1 flex-shrink-0 text-lg" />
+                  <div className="flex flex-wrap gap-2">
+                    {emailAddresses.map((email, index) => (
+                      <a 
+                        key={index} 
+                        href={`mailto:${email}`} 
+                        className="inline-block px-3 py-1 bg-[#2E2111] text-[#fd7024cc] rounded-full email_text text-sm hover:bg-[#3a2a16] transition-colors"
+                      >
+                        {email}
+                      </a>
+                    ))}
                   </div>
                 </div>
               </div>

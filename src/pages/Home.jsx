@@ -53,10 +53,7 @@ const Home = () => {
         
 
         <Contact />
-        <div className="sticky top-0">
-          {/* <Footer /> */}
-          <NormalFooter />
-        </div>
+        <NormalFooter />
     </div>
   )
 }

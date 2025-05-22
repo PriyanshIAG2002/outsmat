@@ -12,27 +12,28 @@ const teamMembers = [
     name: 'Sathish CP',
     title: 'Head of Sales Operations',
     description: 'Been an active operator in the Startup space since 2017, working closely with startups across sales, partnerships, Business development, and Strategy.',
-    linkedIn: 'https://www.linkedin.com/in/sathish-cp/',
+    linkedIn: 'https://www.linkedin.com/in/sathishcp/',
     // Using placeholder for now
-    image: 'https://image.lexica.art/full_webp/59d8288c-16de-46d1-b080-a7da1c8599a6',
+    image: 'https://res.cloudinary.com/dtb9kxfvj/image/upload/v1747550405/WhatsApp_Image_2024-12-21_at_00.18.05-Photoroom_alhua8.png',
   },
   {
     id: 2,
     name: 'Harsha HA',
     title: 'Head of Partnerships',
     description: 'With 15 years of experience and a deep passion for Startups, I thrive on crafting solutions that drive desired Outcomes like efficiency, growth, innovation.',
-    linkedIn: 'https://www.linkedin.com/in/harsha-ha/',
+    linkedIn: 'https://www.linkedin.com/in/sathishcp/',
     // Using placeholder for now
-    image: 'https://image.lexica.art/full_webp/59d8288c-16de-46d1-b080-a7da1c8599a6',
+    image: 'https://res.cloudinary.com/dtb9kxfvj/image/upload/v1747550403/1734187178754-Photoroom_cckmak.png',
   },
   {
     id: 3,
     name: 'Kallol Dasgupta',
     title: 'Growth Consultant',
     description: 'Been actively engaged in the startup ecosystem as an advisor, consultant, strategic investor and board member. Skilled in evaluating market conditions, and competition.',
-    linkedIn: 'https://www.linkedin.com/in/kallol-dasgupta/',
+    linkedIn: 'https://www.linkedin.com/in/kallol-dasgupta-kd-5757a096/',
     // Using placeholder for now
-    image: 'https://image.lexica.art/full_webp/59d8288c-16de-46d1-b080-a7da1c8599a6',
+  
+    image: 'https://res.cloudinary.com/dtb9kxfvj/image/upload/v1747550404/KD-Photo-for-website-Photoroom_lvvit7.png',
   },
 ];
 

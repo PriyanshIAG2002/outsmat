@@ -94,7 +94,12 @@ const OurApproach = () => {
                   <div 
                     className={styles.imageWrapper}
                     style={{
-                      background: index % 2 === 0 ? "#FF8534" : "#49E0DD"
+                      background: index === 0 ? "#FF8534" : 
+                      index === 1 ? "#49E0DD" :
+                      index === 2 ? "#F88C37" :
+                      index === 3 ? "#4bd1ce" :
+                      index === 4 ? "#f59033" :
+                      "#49E0DD"
                     }}
                   >
                     <img src={item.lottieImg} alt={item.title} />
