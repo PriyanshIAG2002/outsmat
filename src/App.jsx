@@ -7,6 +7,7 @@ import Lenis from "lenis";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -50,6 +51,31 @@ const App = () => {
     loadContent();
   }, []);
 
+  // Scroll to top button visibility handler
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Function to scroll to top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <>
       <AnimatePresence mode='wait'>
@@ -59,6 +85,30 @@ const App = () => {
         <Routes>
           <Route index path="/" element={<Home />} />
         </Routes>
+        
+        {/* Scroll to top button */}
+        {showScrollTop && (
+          <button 
+            onClick={scrollToTop}
+            className="fixed bottom-8 right-8 z-50 p-3 bg-[#1d140a] hover:bg-[#2a1d0f] text-[#FFF4B8] rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
+            aria-label="Scroll to top"
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="h-6 w-6" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M5 15l7-7 7 7" 
+              />
+            </svg>
+          </button>
+        )}
       </>
     </>
   );

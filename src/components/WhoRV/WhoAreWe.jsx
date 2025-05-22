@@ -79,7 +79,7 @@ and sustainable growth.
         </Col>
         <Col xl={10} lg={10} md={24} sm={24} xs={24}>
           <div className={styles.ourGoalImgBox}>
-            <img className="rounded-lg" ref={imageRef} src={whoarev} alt="our vision image" />
+            <img className="rounded-lg shadow-lg" ref={imageRef} src={whoarev} alt="our vision image" />
           </div>
         </Col>
       </Row>

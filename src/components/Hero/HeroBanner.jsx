@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from "./HeroBanner.module.css";
-import Lottie from "lottie-react";
 import { ripple } from '../../assets';
-import Tilt from 'react-parallax-tilt';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { motion } from "framer-motion"
+import Lottie from "lottie-react";
+import Tilt from 'react-parallax-tilt';
+
 
 const mainText = "Enabling Sales beyond the inner circle!";
 const mobileMainText = {
@@ -30,13 +31,14 @@ const HeroBanner = () => {
   const [isPreloaded, setIsPreloaded] = useState(false);
   const wordsRef = useRef([]);
   const containerRef = useRef(null);
+  const unicornRef = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
     const preloaderTimer = setTimeout(() => {
       setIsPreloaded(true);
-    }, 3000); // 3 seconds for preloader
+    }, 2500); // 3 seconds for preloader
 
     return () => clearTimeout(preloaderTimer);
   }, []);
@@ -77,28 +79,38 @@ const HeroBanner = () => {
 
   return (
     <div className={`w-full h-screen sticky top-0 ${styles.heroBanner}`}>
+      {/* Unicorn Studio */}
+      {/* Unicorn Studio Ends */}
       <div className={styles.grainOverlay} />
+     
+        <div className={`${styles.heroTopSection}`}>
+        <Tilt 
+          tiltAxis={"y"}
+          tiltMaxAngleX={2}
+          tiltMaxAngleY={2}
+          className={styles.tiltWrapper || "relative"}
+        >
+          {isPreloaded && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className={styles.mainHeading}
+            >
+              <span className={styles.desktopHeading}>{mainText}</span>
+              <div className={styles.mobileHeading}>
+                <div>{mobileMainText.line1}</div>
+                <div>{mobileMainText.line2}</div>
+                <div>{mobileMainText.line3}</div>
+              </div>
+            </motion.div>
+          )}
+      </Tilt>
 
-      <div className={`${styles.heroTopSection}`}>
-        {isPreloaded && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className={styles.mainHeading}
-          >
-            <span className={styles.desktopHeading}>{mainText}</span>
-            <div className={styles.mobileHeading}>
-              <div>{mobileMainText.line1}</div>
-              <div>{mobileMainText.line2}</div>
-              <div>{mobileMainText.line3}</div>
-            </div>
-          </motion.div>
-        )}
-      </div>
+        </div>
 
       <div className={`absolute ${styles.heroRipple}`}>
-        <Lottie animationData={ripple} loop={true} className={`w-[550px] ${styles.lottieMain}`} />
+        <Lottie animationData={ripple} alt="Ripple effect" className={`w-[550px] ${styles.lottieMain}`} />
       </div>
 
       <div className={`${styles.heroBottomSections}`} ref={containerRef}>

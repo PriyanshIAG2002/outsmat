@@ -1,8 +1,6 @@
 import React, { useRef } from 'react';
 import styles from "./OurService.module.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Lottie from "lottie-react";
-import { ripple } from '../../assets';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/navigation';
@@ -52,27 +50,29 @@ const OurServices = () => {
       );
     });
 
-    // Exit animation
-    const exitTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
+    // Exit animation - only on desktop/tablet
+    gsap.matchMedia().add("(min-width: 768px)", () => {
+      const exitTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
 
-    exitTl.to(sectionRef.current, {
-      opacity: 0.9,
-      y: -100,
-      scale: 1.1,
-      duration: 1,
+      exitTl.to(sectionRef.current, {
+        opacity: 0.9,
+        y: -100,
+        scale: 1.1,
+        duration: 1,
+      });
     });
 
   }, []);
 
   return (
-    <div id="our-service" ref={sectionRef} className={`w-full h-screen sticky top-0 ${styles.ourservice}`}>
+    <div id="our-service" ref={sectionRef} className={`w-full ${styles.ourservice}`}>
       <Swiper
         ref={swiperRef}
         slidesPerView={1}
@@ -83,20 +83,26 @@ const OurServices = () => {
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Navigation]}
-        className="mySwiper"
+        className={`mySwiper ${styles.swiperContainer}`}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 30
+          }
+        }}
       >
         {serviceData.map((service, index) => (
-          <SwiperSlide key={service.id}>
-            <Row className={`w-full h-full border-l ${styles.ourServiceRow}`}>
-              <Col className={`w-full h-full ${styles.ourServiceCol}`} xl={10} lg={10} md={24} sm={24} xs={24}>
-                <div
-                  ref={(el) => (imageRefs.current[index] = el)}
-                  className={`flex justify-center items-center w-full h-full ${styles.ourLootieBox}`}
-                >
-                  <Lottie animationData={service.imgsrc} loop={true} className={`${styles.lootieStyle}`} />
-                </div>
-              </Col>
-              <Col className={`w-full h-full ${styles.ourServiceCol}`} xl={14} lg={14} md={24} sm={24} xs={24}>
+          <SwiperSlide key={service.id} className={styles.swiperSlide}>
+            <Row className={`w-full h-full ${styles.ourServiceRow}`}>
+              <Col className={`w-full ${styles.ourServiceCol}`} xl={14} lg={14} md={24} sm={24} xs={24}>
                 <div className={styles.ourVisionBox}>
                   <h1 ref={(el) => (headingRefs.current[index] = el)} className={styles.ourVisionHead}>
                     {service.title}
@@ -106,6 +112,19 @@ const OurServices = () => {
                   </p>
                 </div>
               </Col>
+              <Col className={`w-full ${styles.ourServiceCol}`} xl={10} lg={10} md={24} sm={24} xs={24}>
+                <div
+                  ref={(el) => (imageRefs.current[index] = el)}
+                  className={styles.ourLootieBox}
+                >
+                  <img 
+                    src={service.imgsrc} 
+                    alt={service.title} 
+                    className={styles.lootieStyle} 
+                    loading="lazy"
+                  />
+                </div>
+              </Col>
             </Row>
           </SwiperSlide>
         ))}
@@ -113,10 +132,10 @@ const OurServices = () => {
 
       {/* Custom Navigation Buttons */}
       <div className={styles.navButtons}>
-        <button className={styles.leftNavButton} onClick={() => swiperRef.current.swiper.slidePrev()}>
+        <button className={styles.leftNavButton} onClick={() => swiperRef.current.swiper.slidePrev()} aria-label="Previous slide">
           <FaArrowLeft />
         </button>
-        <button className={styles.rightNavButton} onClick={() => swiperRef.current.swiper.slideNext()}>
+        <button className={styles.rightNavButton} onClick={() => swiperRef.current.swiper.slideNext()} aria-label="Next slide">
           <FaArrowRight />
         </button>
       </div>

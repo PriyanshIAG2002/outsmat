@@ -5,6 +5,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { ourv } from '../../assets';
+import Lottie from "lottie-react";
+import { ripple } from '../../assets';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +15,7 @@ const OurGoal = () => {
   const headingRef = useRef(null);
   const subheadingRef = useRef(null);
   const imageRef = useRef(null);
+  const lottieRef = useRef(null);
 
   useGSAP(() => {
     // Entry animation timeline
@@ -39,6 +42,13 @@ const OurGoal = () => {
       "-=1"
     );
 
+    entryTl.fromTo(
+      lottieRef.current, 
+      { opacity: 0, scale: 0.5 }, 
+      { opacity: 1, scale: 1, duration: 1.5 },
+      "-=1.2"
+    );
+
     // Exit animation timeline
     const exitTl = gsap.timeline({
       scrollTrigger: {
@@ -61,6 +71,12 @@ const OurGoal = () => {
       "-=1.5"
     );
 
+    exitTl.to(
+      lottieRef.current,
+      { opacity: 0, scale: 0.7, duration: 1.5 },
+      "-=1.5"
+    );
+
   }, []);
 
   return (
@@ -77,7 +93,7 @@ const OurGoal = () => {
         </Col>
         <Col xl={10} lg={10} md={24} sm={24} xs={24}>
           <div className={styles.ourGoalImgBox}>
-            <img className="rounded-lg shadow-lg" ref={imageRef} src={ourv} alt="our vision image" />
+            <Lottie ref={lottieRef} animationData={ripple} alt="Ripple effect" className={`w-[550px] ${styles.lottieMain}`} />
           </div>
         </Col>
       </Row>

@@ -78,7 +78,8 @@
     margin-top: 7rem;
 }
 .ourVisionBox{
-    margin-top: 4rem;
+    margin-top: 2rem;
+    margin-left: 0px;
 }
 
 .ourVisionHead{
@@ -91,16 +92,20 @@
 
 .ourVisionBox{
     padding-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ourVisionSubhead{
     color: #FFF4B8;
-    font-size:1.2rem;
-    line-height: 1.2em;
-    font-weight:500;
+    font-size:1rem;
+    line-height: 1.4em;
+    font-weight:300;
     font-family: "Poppins", serif;
     margin-top: 1.5rem;
     text-align: center;
     padding-left: 0px;
+    width: 100%;
 }
 }

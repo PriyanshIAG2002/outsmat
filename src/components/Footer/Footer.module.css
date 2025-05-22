@@ -7,9 +7,18 @@
 .footerContainer{
     background:#1d140a;
     width:100%;
-    height:100vh;
+    min-height:100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
+.boxMain{
+    padding: 3rem;
+    height: 100%;
+    width: 100%;
+}
 
 .footerHeading2{
     font-size: 20vw;
@@ -17,6 +26,7 @@
     font-family: 'Poppins', sans-serif;
     line-height:1em;
     text-align:center;
+    z-index: 9999;
 }
 
 .footerSubheading2{
@@ -31,10 +41,6 @@
     margin-top:1rem;
 }
 
-.boxMain{
-    padding: 3rem;
-}
-
 .footerHeading,.footersubHeading{
     font-size: 1.2rem;
     font-weight: 600;
@@ -43,7 +49,7 @@
 }
 
 .footersubHeading{
-    color: #FFF4B8;
+    color: #F76A1E;
 }
 
 .footerTitle{
@@ -51,6 +57,7 @@
     font-weight: 600;
     color: #7d7152;
     font-family: 'Poppins', sans-serif;
+    transition: color 0.2s ease;
 }
 
 .footerHeading{
@@ -63,6 +70,7 @@
     overflow: hidden;
     padding: 0.5rem 0;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .mainBox::before {
@@ -98,6 +106,7 @@
 
 .footerBox{
     width:80%;
+    margin: 0 auto;
 }
 
 @media (max-width: 767px) {
@@ -108,59 +117,80 @@
     }
     
     .boxMain{
-        padding: 1rem;
+        padding: 1.5rem 1rem;
     }
     
     .footerHeading,.footersubHeading{
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 600;
+        margin-bottom: 0.5rem;
     }
 
     .footersubHeading{
-        line-height:0.8em;
+        line-height: 1.2em;
+        padding: 0.3rem 0;
     }
     
     .footerTitle{
         font-size: 16px;
         font-weight: 600;
+        margin-bottom: 0.3rem;
     }
 
     .footerHeading{
-        margin-top:3rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(125, 113, 82, 0.3);
     }
     
     .footerBox{
-        width:100%;
-        padding-bottom:3rem;
+        width: 100%;
+        padding-bottom: 2rem;
     }
 
     .boxStyle{
-        margin-top:3rem;
+        margin-top: 1rem;
     }
 
     .mainBox {
-        padding: 0.3rem 0;
+        padding: 0.5rem 0;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(125, 113, 82, 0.1);
     }
 
+    .mainBox:last-child {
+        border-bottom: none;
+    }
 
     .footerContainer{
-        background:#1d140a;
-        width:100%;
-        height:50vh;
+        background: #1d140a;
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        padding-bottom: 2rem;
     }
     
-    
     .footerHeading2{
-        padding-top:1rem
+        padding-top: 1rem;
     }
     
     .footerSubheading2{
-        position:absolute;
-        right:1rem;
+        position: absolute;
+        right: 1rem;
     }
     
     .footerSubheading2 div{
         font-size: 8vw;
-        text-align:right;
+        text-align: right;
+    }
+
+    .mbflex{
+        align-items: flex-start;
+    }
+
+    .footer{
+        border-top: 2px solid rgb(255, 102, 0);
     }
 }

@@ -1,24 +1,14 @@
 import React, { useRef, useState } from 'react';
 import styles from "./Contact.module.css";
 import { Row, Col } from 'antd';
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lottie from "lottie-react";
-import { ripple } from '../../assets';
 import emailjs from "emailjs-com";
 import { Slide, toast } from "react-toastify";
 import { motion } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
-
-gsap.registerPlugin(ScrollTrigger);
+import { logo } from '../../assets';
 
 const Contact = () => {
-    const sectionRef = useRef(null);
-    const contentRef = useRef(null);
-    const formRef = useRef(null);
-    const lottieRef = useRef(null);
     const form = useRef();
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
@@ -27,39 +17,9 @@ const Contact = () => {
       company: "",
     });
 
-    useGSAP(() => {
-      // Exit animation timeline
-      const exitTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top -10%",
-          end: "top -100%",
-          scrub: true,
-        }
-      });
-
-      // Exit animations for content
-      exitTl.to(contentRef.current, {
-        y: 100,
-        opacity: 0,
-        duration: 1
-      });
-
-      // Exit animations for form
-      exitTl.to(formRef.current, {
-        y: 50,
-        opacity: 0,
-        duration: 1
-      }, "-=0.5");
-
-      // Exit animations for lottie
-      exitTl.to(lottieRef.current, {
-        y: 100,
-        opacity: 0,
-        scale: 0.8,
-        duration: 1
-      }, "-=0.8");
-    }, []);
+    // Arrays for contact information
+    const phoneNumbers = ["9597062534", "9886667828"];
+    const emailAddresses = ["Sathish@teamoutsmart.in", "Shreeharsha@teamoutsmart.in"];
 
     const handleChange = (e) => {
       const { name, value } = e.target;
@@ -119,12 +79,11 @@ const Contact = () => {
     };
 
   return (
-    <div id="contact" ref={sectionRef} className={`${styles.contactUs} w-full h-screen sticky top-0`}>
+    <div id="contact" className={`${styles.contactUs} w-full h-screen`}>
       <Row className={styles.row}>
         <Col xl={14} lg={14} md={24} sm={24} xs={24}>
-          <div className={`${styles.col1} ${styles.cols} bg-[#2E2111]`}>
+          <div className={`${styles.col1} ${styles.cols} bg-[#2E2111] flex flex-col justify-center items-start`}>
             <motion.div 
-              ref={contentRef}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -135,7 +94,6 @@ const Contact = () => {
             </motion.div>
 
             <motion.div 
-              ref={formRef}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -185,15 +143,54 @@ const Contact = () => {
           </div>
         </Col>
         <Col xl={10} lg={10} md={24} sm={24} xs={24}>
-          <div className={`${styles.col2} ${styles.cols} bg-[#1d140a]`}>
-            <motion.div 
-              ref={lottieRef}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              className={`flex justify-center items-center w-full h-full`}
+          <div className={`${styles.col2} ${styles.cols} bg-[#1d140a] flex justify-center items-center`}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="p-5 w-[95%] md:max-w-[80%] text-[#f76a1e5b] bg-[#1d140a] bg-opacity-80 rounded-lg"
             >
-              <Lottie animationData={ripple} loop={true} className={`w-[400px]`} />
+              <div className="flex justify-center mb-6">
+                <img src={logo} alt="Outsmart Logo" className="h-16" />
+              </div>
+              <div className="space-y-3 text-sm">
+                <div className="flex items-start">
+                  <FaMapMarkerAlt className="text-[#F76A1E] mr-2 mt-1 flex-shrink-0 text-lg" />
+                  <div>
+                    <p className="font-semibold text-[#F76A1E]">Excel Business Foundry Pvt Ltd</p>
+                    <p className="text-[#fd7024cc]">Nextcoworks, Alankar Plaza, Bk Circle, Nayak Layout, JP Nagar 8th Phase, Bengaluru, Karnataka 560078</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <FaPhone className="text-[#F76A1E] mr-2 mt-1 flex-shrink-0 text-lg" />
+                  <div className="flex flex-wrap gap-2">
+                    {phoneNumbers.map((phone, index) => (
+                      <span 
+                        key={index} 
+                        className="inline-block px-3 py-1 bg-[#2E2111] text-[#fd7024cc] rounded-full text-sm"
+                      >
+                        {phone}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <FaEnvelope className="text-[#F76A1E] mr-2 mt-1 flex-shrink-0 text-lg" />
+                  <div className="flex flex-wrap gap-2">
+                    {emailAddresses.map((email, index) => (
+                      <a 
+                        key={index} 
+                        href={`mailto:${email}`} 
+                        className="inline-block px-3 py-1 bg-[#2E2111] text-[#fd7024cc] rounded-full email_text text-sm hover:bg-[#3a2a16] transition-colors"
+                      >
+                        {email}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
         </Col>
