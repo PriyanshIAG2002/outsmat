@@ -14,7 +14,7 @@ const teamMembers = [
     description: 'Been an active operator in the Startup space since 2017, working closely with startups across sales, partnerships, Business development, and Strategy.',
     linkedIn: 'https://www.linkedin.com/in/sathishcp/',
     // Using placeholder for now
-    image: 'https://res.cloudinary.com/dtb9kxfvj/image/upload/v1747550405/WhatsApp_Image_2024-12-21_at_00.18.05-Photoroom_alhua8.png',
+    image: 'https://res.cloudinary.com/dtb9kxfvj/image/upload/v1748360964/Frame_2_1_dtib7f.png',
   },
   {
     id: 2,

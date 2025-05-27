@@ -16,28 +16,28 @@ export const whoAreWeData =  [
   export const serviceData = [
     {
         id: 1,
-        imgsrc: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1746375095/ChatGPT_Image_May_4_2025_09_41_26_PM_vfo4ra.png", // Add the image URL here
+        imgsrc: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1748239407/2_bg621i.png", // Add the image URL here
         title: "Discovery",
         subtitle: `Together, we'll define your ideal customer and map their needs and pain points. We'll also
 build a list of potential prospects to help you kickstart the outreach campaigns.`
     },
     {
         id: 2,
-        imgsrc: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1746374159/ChatGPT_Image_May_4_2025_09_24_12_PM_r91j2u.png", // Add the image URL here
+        imgsrc: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1748239407/3_jx26it.png", // Add the image URL here
         title: "Kick-Start",
         subtitle: `With our targeted approach, we help budding startups secure the first 10 customers or MVP
 participants, giving them the momentum they need to kickstart their journey.`
     },
     {
         id: 3,
-        imgsrc: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1746374261/ChatGPT_Image_May_4_2025_09_27_19_PM_okuthp.png", // Add the image URL here
+        imgsrc: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1748239407/4_ocdh0h.png", // Add the image URL here
         title: "Expansion",
         subtitle: `We become an extended team that manages outreach and lead generation for niche market
 segments or products, from discovery to setting up introductory calls.`
     },
     {
         id: 4,
-        imgsrc: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1746374345/ChatGPT_Image_May_4_2025_09_28_45_PM_bkkyri.png", // Add the image URL here
+        imgsrc: "https://res.cloudinary.com/dtb9kxfvj/image/upload/v1748239407/5_homjly.png", // Add the image URL here
         title: "Enablement",
         subtitle: `We offer tailored guidance on initiating outreach, optimizing sales processes, building and
 training in-house teams, and developing effective client acquisition strategies.`
