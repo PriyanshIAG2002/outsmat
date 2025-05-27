@@ -32,7 +32,7 @@ const Home = () => {
         </div>
         <OurServices />
         <div className={`${styles.infoStripe} w-full h-[50px] bg-[#FCB683]`}>
-          Our Approch
+          Our Approach
         </div>
         <OurApproach />
         <div className={`${styles.infoStripe} w-full h-[50px] bg-[#FCB683]`}>

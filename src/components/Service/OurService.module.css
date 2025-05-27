@@ -54,6 +54,16 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
+
+    color: #FFF4B8;
+    font-size:1.8rem;
+    line-height: 1.5em;
+    font-weight:300;
+    font-family: "Poppins", serif;
+    margin-top: 1.2rem;
+    /* padding-left: 1rem; */
+    max-width:95%;
+    word-spacing: 0.1em;
 }
 
 .navButtons {
@@ -208,7 +218,7 @@
         color: #FFF4B8;
         font-size: 1.2rem;
         line-height: 1.4em;
-        font-weight: 500;
+        font-weight: 300;
         font-family: "Poppins", serif;
         margin-top: 1rem;
         word-wrap: break-word;
@@ -255,11 +265,11 @@
     
     .ourVisionHead {
         font-size: 1.8rem;
-        display: none;
+        /* display: none; */
     }
     
     .ourVisionSubhead {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     
     .lootieStyle {

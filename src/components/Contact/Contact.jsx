@@ -37,18 +37,28 @@ const Contact = () => {
     const handleSubmit = (e) => {
       e.preventDefault();
       setLoading(true);
+
+      // Prepare template parameters
+      const templateParams = {
+        to_email: "piyuindia4@gmail.com",
+        reply_to: formData.email,
+        name: formData.name,
+        email: formData.email,
+        company: formData.company
+      };
+
       emailjs
-        .sendForm(
-          "service_wbrdcli",
-          "template_ghdja7d",
-          form.current,
-          "gbPZu0yZl9NphdAfF"
+        .send(
+          "service_aqlalzb",  // Your EmailJS service ID
+          "template_4gajg65", // Your EmailJS template ID
+          templateParams,
+          "ZkqXUdVa1s5MFIDoM" // Your EmailJS public key
         )
         .then(
-          () => {
-            toast.success("Details Submitted.", {
+          (result) => {
+            toast.success("Thank you for contacting us! We'll get back to you soon.", {
               position: "top-center",
-              autoClose: 2000,
+              autoClose: 3000,
               hideProgressBar: false,
               closeOnClick: true,
               pauseOnHover: true,
@@ -56,14 +66,20 @@ const Contact = () => {
               progress: undefined,
               theme: "colored",
               transition: Slide,
+              style: {
+                backgroundColor: '#F76A1E',
+                color: 'white',
+                fontWeight: '500',
+              }
             });
             resetForm();
             setLoading(false);
           },
-          () => {
-            toast.error("Oops! Something went wrong.", {
+          (error) => {
+            console.error("Email error:", error);
+            toast.error("Failed to send message. Please try again.", {
               position: "top-center",
-              autoClose: 2000,
+              autoClose: 3000,
               hideProgressBar: false,
               closeOnClick: true,
               pauseOnHover: true,
@@ -71,8 +87,12 @@ const Contact = () => {
               progress: undefined,
               theme: "colored",
               transition: Slide,
+              style: {
+                backgroundColor: '#ff3333',
+                color: 'white',
+                fontWeight: '500',
+              }
             });
-            resetForm();
             setLoading(false);
           }
         );
